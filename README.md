@@ -13,7 +13,7 @@ IPW can help by offering Sane Defaults (or "Convention Over Configuration") for 
 
 We'll know we're right, if
 - **time blocked by cross-project dependencies goes down** (because everyone'll have better visibility into foreign priorities and velocity), 
-- ** the amount of foreign Pull Requests go up** (bc it'll be easier to just write some patches yrself, rather than waiting for the native team to do it).
+- **the amount of foreign Pull Requests go up** (bc it'll be easier to just write some patches yrself, rather than waiting for the native team to do it).
 
 🌌🌌 Who benefits from IPW?
 =============================
