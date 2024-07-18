@@ -17,7 +17,7 @@ echo "IPW Story Type Field ID: $IPW_STORY_TYPE_FIELD_ID"
 echo "IPW Epic Option ID: $IPW_EPIC_OPTION_ID"
 echo
 
-# Function to count the number of items in the IPW project
+# Count items in the IPW project
 count_ipw_project_items() {
     gh project item-list $IPW_PROJECT_NUMBER --limit 1000 --format json --owner interchainio | jq '.items | length'
 }
@@ -124,3 +124,31 @@ final_item_count=$(count_ipw_project_items)
 echo "Final number of items in IPW project: $final_item_count"
 
 echo "Script completed."
+
+
+# ➜  interchain_public_works git:(main) ./sync_epics.sh
+# ########### sync_epics v0.0.9
+# ##### Starting sync_epics.sh script...
+# Foreign Repositories: cosmos/cosmos-sdk
+# IPW Project Number: 3
+# IPW Story Type Field ID: PVTSSF_lADOAsuzxc4AkKP5zgcaQoo
+# IPW Epic Option ID: 282f80fd
+
+# Initial number of items in IPW project: 182
+# Processing repository: cosmos/cosmos-sdk
+# Fetching project list for owner: cosmos
+# Project ID for cosmos/cosmos-sdk: PVT_kwDOAAN9684ABqEw
+# Project number for cosmos/cosmos-sdk: 26
+# Story Type Field ID for cosmos/cosmos-sdk: PVTSSF_lADOAAN9684ABqEwzgUA_b0
+# Status Type Field ID for cosmos/cosmos-sdk:
+# Epic Option ID for cosmos/cosmos-sdk: c787afd8
+# jq: error (at <stdin>:1): Cannot iterate over null (null)
+# No issues found with Story Type containing 'Epic' in repository: cosmos/cosmos-sdk
+
+# Final number of items in IPW project: 182
+# Script completed.
+
+#
+# gh project item-list 26 --owner cosmos --format json | jq -r --arg STORY_TYPE_FIELD_ID "PVTSSF_lADOAAN9684ABqEwzgUA_b0"'.items[] | select(.fieldValues[] | select(.field.id == $STORY_TYPE_FIELD_ID and .name | contains("Epic"))) | "\(.content.url)"')
+# gh project item-list 26 --owner cosmos --format json | jq -r --arg STORY_TYPE_FIELD_ID "PVTSSF_lADOAAN9684ABqEwzgUA_b0" --arg STATUS_FIELD_ID "$STATUS_FIELD_ID" '.items[] | select(.fieldValues[] | select(.field.id == $STORY_TYPE_FIELD_ID and .name | contains("Epic"))) | "\(.content.url) \(.fieldValues[] | select(.field.id == $STATUS_FIELD_ID).value)"')
+#
