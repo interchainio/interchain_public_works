@@ -9,15 +9,18 @@ FOREIGN_REPOS=("cosmos/cosmos-sdk")  # Replace with actual repository names
 IPW_PROJECT_NUMBER=3  # Replace with your IPW project number
 IPW_STORY_TYPE_FIELD_ID="PVTSSF_lADOAsuzxc4AkKP5zgcaQoo"  # Replace with your Story Type field ID
 IPW_EPIC_OPTION_ID="282f80fd"  # Replace with your Epic option ID
-LIMIT=5  # Limit API calls during testing
+API_LIMIT=5  # Limit API calls during testing
 FAKE_LIMIT=999  # Some gh calls break w/o an explicit limit set
 
 echo "##### Starting sync_epics.sh script..."
-echo "Foreign Repositories: ${FOREIGN_REPOS[@]}"
-echo "IPW Project Number: $IPW_PROJECT_NUMBER"
-echo "IPW Story Type Field ID: $IPW_STORY_TYPE_FIELD_ID"
-echo "IPW Epic Option ID: $IPW_EPIC_OPTION_ID"
-echo "API limit: $LIMIT"
+printf "| %-30s | %-40s |\n" "Key" "Value"
+printf "| %-30s | %-40s |\n" "------------------------------" "----------------------------------------"
+printf "| %-30s | %-40s |\n" "SCRIPT_VERSION" "$SCRIPT_VERSION"
+printf "| %-30s | %-40s |\n" "FOREIGN_REPOS" "${FOREIGN_REPOS[@]}"
+printf "| %-30s | %-40s |\n" "IPW_PROJECT_NUMBER" "$IPW_PROJECT_NUMBER"
+printf "| %-30s | %-40s |\n" "IPW_STORY_TYPE_FIELD_ID" "$IPW_STORY_TYPE_FIELD_ID"
+printf "| %-30s | %-40s |\n" "IPW_EPIC_OPTION_ID" "$IPW_EPIC_OPTION_ID"
+printf "| %-30s | %-40s |\n" "API_LIMIT" "$API_LIMIT"
 echo
 
 # Count items in the IPW project
@@ -115,7 +118,7 @@ for repo in "${FOREIGN_REPOS[@]}"; do
     echo "Epic Option ID for $repo: $EPIC_OPTION_ID"
 
     # Get all issues with Story Type containing "Epic" and their Status
-    items=$(gh project item-list $PROJECT_NUMBER --owner $owner --format json --limit $LIMIT)
+    items=$(gh project item-list $PROJECT_NUMBER --owner $owner --format json --limit $API_LIMIT)
     echo "Items JSON: $items"  # Debug output
     issues=$(echo "$items" | jq -r --arg STORY_TYPE_FIELD_ID "$STORY_TYPE_FIELD_ID" --arg EPIC_OPTION_ID "$EPIC_OPTION_ID" --arg STATUS_FIELD_ID "$STATUS_TYPE_FIELD_ID" '
         .items[] |
