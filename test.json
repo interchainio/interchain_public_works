@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "number": 1,
+      "title": "Interchaintest test suite should test the upgrade/update clients flow for unfreezing IBC light clients.",
+      "status": "📋 Backlog"
+    }
+  ],
+  "epics": [
+    {
+      "number": 882,
+      "title": "EPIC: Template test should have explanations",
+      "status": "☃️ Icebox"
+    },
+    {
+      "number": 883,
+      "title": "EPIC: Improve documentation",
+      "status": "📤 In Progress"
+    }
+  ],
+  "statuses": [
+    "📋 Backlog", "👀 Waiting / In review"
+  ]
+}
