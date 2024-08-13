@@ -48,9 +48,12 @@ Dir.glob("#{backlog_stubs}/*.json").each do |file_path|
           file.puts "\n"
           file.puts "#### Item Edit: #{issue_title}, #{issues["id"]}"
           file.puts "##### Item Edit: set story type to Epic"
-          file.puts "gh project item-edit --id #{issues["id"]} --project-id #{ipw_project_id} --field-id #{ipw_story_type_field_id} --single-select-option-id string #{ipw_option_id_for_epic}"
+          file.puts "gh project item-edit --id #{issues["id"]} --project-id #{ipw_project_id} --field-id #{ipw_story_type_field_id} --single-select-option-id #{ipw_option_id_for_epic}"
+
+          issue_id_in_ipw = gh p item-list 3 --owner interchainio --limit 500 --format json | jq -r '.items[] | select(.content.url == "https://github.com/strangelove-ventures/interchaintest/issues/882") | .id'
+
           file.puts "###### Item Edit: set story status #{issue_status}"
-          file.puts "gh project item-edit --id #{issues["id"]} --project-id #{ipw_project_id} --field-id #{ipw_story_status_field_id} --single-select-option-id string #{ipw_option_id_for_story_status}"
+          file.puts "gh project item-edit --id #{issues_id_in_ipw} --project-id #{ipw_project_id} --field-id #{ipw_story_status_field_id} --single-select-option-id #{ipw_option_id_for_story_status}"
           file.puts "\n # ---\n\n"
         end
       end
@@ -61,5 +64,3 @@ end
 # Make the run_me.sh file executable
 system("chmod +x #{run_me_file}")
 
-
-# gh p item-list 3 --owner interchainio --limit 1 --format json -q '.items[] | select(.content.repository == "https://github.com/cosmos/cosmos-sdk")'

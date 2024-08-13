@@ -311,9 +311,9 @@ gh project item-add 3 --url https://github.com/strangelove-ventures/interchainte
 
 #### Item Edit: EPIC: cosmwasm frameworks should be easily deployable via interchaintest, PVTI_lADOBTYxNs4AkKTLzgQlDhI
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOBTYxNs4AkKTLzgQlDhI --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id PVTI_lADOAsuzxc4AkKP5zgRy9I4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 📋 Backlog
-gh project item-edit --id PVTI_lADOBTYxNs4AkKTLzgQlDhI --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string f75ad846
+gh project item-edit --id PVTI_lADOAsuzxc4AkKP5zgRy9I4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id f75ad846
 
  # ---
 
