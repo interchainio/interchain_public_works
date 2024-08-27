@@ -1,0 +1,20 @@
+require 'rake'
+
+# Define the tasks
+desc "Fetch Epics as JSON"
+task :fetch_epics do
+  sh './graphql_to_GET_epics_as_json.sh'
+end
+
+desc "Construct PUT requests for Epics"
+task :construct_puts => :fetch_epics do
+  ruby 'graphql_to_construct_epic_PUTs.rb'
+end
+
+desc "Send PUT requests to IPW"
+task :put_epics => :construct_puts do
+  sh './PUT_epics_to_IPW.sh'
+end
+
+# Default task
+task :default => :put_epics
