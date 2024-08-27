@@ -3,9 +3,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/13085 --
 
 #### Item Edit: EPIC: Dev UX, PVTI_lADOAAN9684ABqEwzgCSefg
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgCSefg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 📋 Backlog
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgCSefg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string f75ad846
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id f75ad846
 
  # ---
 
@@ -14,9 +14,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/11899 --
 
 #### Item Edit: EPIC: Separate all SDK modules into standalone go modules, PVTI_lADOAAN9684ABqEwzgBGdRU
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgBGdRU --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgBGdRU --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -25,9 +25,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/9958 --o
 
 #### Item Edit: EPIC: Separate x/auth and vesting, PVTI_lADOAAN9684ABqEwzgBGIOU
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgBGIOU --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id PVTI_lADOAsuzxc4AkKP5zgQ9Oxg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgBGIOU --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id PVTI_lADOAsuzxc4AkKP5zgQ9Oxg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -36,9 +36,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/13039 --
 
 #### Item Edit: EPIC: determinism with maps, PVTI_lADOAAN9684ABqEwzgCSehg
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgCSehg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgCSehg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -47,9 +47,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/17045 --
 
 #### Item Edit: [Epic]: Runtime, PVTI_lADOAAN9684ABqEwzgIAN7M
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgIAN7M --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgIAN7M --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -58,9 +58,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/17781 --
 
 #### Item Edit: Additional features for gov module, PVTI_lADOAAN9684ABqEwzgKmXrY
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKmXrY --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKmXrY --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -69,9 +69,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/17786 --
 
 #### Item Edit: Epic: x/accounts, PVTI_lADOAAN9684ABqEwzgKoqUw
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKoqUw --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKoqUw --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -80,9 +80,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/18141 --
 
 #### Item Edit: Split Cons pubkey rotation PR, PVTI_lADOAAN9684ABqEwzgKorEE
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKorEE --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKorEE --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -91,9 +91,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/18462 --
 
 #### Item Edit: Implement PebbleDB Pruning and Fixes, PVTI_lADOAAN9684ABqEwzgKo5nM
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKo5nM --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKo5nM --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -102,9 +102,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/18374 --
 
 #### Item Edit: [Feature]: protocol funds, PVTI_lADOAAN9684ABqEwzgKsAm4
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKsAm4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKsAm4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -113,9 +113,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk-docs/issues/84 
 
 #### Item Edit: [Epic]: Phase 2 Documentation, PVTI_lADOAAN9684ABqEwzgKsbUk
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKsbUk --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKsbUk --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
@@ -124,9 +124,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/18446 --
 
 #### Item Edit: [Epic]: auth/tx migration, PVTI_lADOAAN9684ABqEwzgKt4UQ
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKt4UQ --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status ☃️ Icebox
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKt4UQ --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string d958ab90
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id d958ab90
 
  # ---
 
@@ -135,9 +135,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/17041 --
 
 #### Item Edit: [Epic]: Storage/v2, PVTI_lADOAAN9684ABqEwzgKt4u4
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKt4u4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKt4u4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 47fc9ee4
 
  # ---
 
@@ -146,9 +146,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/18523 --
 
 #### Item Edit: [Epic]: Rolling Upgrades, PVTI_lADOAAN9684ABqEwzgKxMDw
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKxMDw --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status ☃️ Icebox
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgKxMDw --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string d958ab90
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id d958ab90
 
  # ---
 
@@ -157,9 +157,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/18580 --
 
 #### Item Edit: [Epic]: Client v2, PVTI_lADOAAN9684ABqEwzgK8ucg
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgK8ucg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgK8ucg --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 47fc9ee4
 
  # ---
 
@@ -168,9 +168,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/18591 --
 
 #### Item Edit: [EPIC]: Sign modes reduction, PVTI_lADOAAN9684ABqEwzgK-b3M
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgK-b3M --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 📋 Backlog
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgK-b3M --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string f75ad846
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id f75ad846
 
  # ---
 
@@ -179,9 +179,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/17579 --
 
 #### Item Edit: [Epic]: Bank/v2, PVTI_lADOAAN9684ABqEwzgLcfu8
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgLcfu8 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgLcfu8 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 47fc9ee4
 
  # ---
 
@@ -190,9 +190,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/19906 --
 
 #### Item Edit: [Epic]: Proving Execution, PVTI_lADOAAN9684ABqEwzgN3E_U
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgN3E_U --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 📋 Backlog
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgN3E_U --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string f75ad846
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id f75ad846
 
  # ---
 
@@ -201,9 +201,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/20058 --
 
 #### Item Edit: [Epic]: x/Auth, PVTI_lADOAAN9684ABqEwzgOSi0Q
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOSi0Q --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOSi0Q --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 47fc9ee4
 
  # ---
 
@@ -212,9 +212,9 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/20067 --
 
 #### Item Edit: [Epic]: Cosmovisor 1.6.0, PVTI_lADOAAN9684ABqEwzgOT4_U
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOT4_U --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOT4_U --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 47fc9ee4
 
  # ---
 
@@ -223,97 +223,12 @@ gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/20267 --
 
 #### Item Edit: [Feature/baseapp]: integrate comet v1 , PVTI_lADOAAN9684ABqEwzgOvCH0
 ##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOvCH0 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
 ###### Item Edit: set story status 🥳 Done
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOvCH0 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 98236657
+gh project item-edit --id  --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id 98236657
 
  # ---
 
 ### Item Add: [Epic]: testing dependency graph  (https://github.com/cosmos/cosmos-sdk/issues/20279)
 gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/20279 --owner interchainio
-
-#### Item Edit: [Epic]: testing dependency graph , PVTI_lADOAAN9684ABqEwzgOwIrQ
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOwIrQ --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
-###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOwIrQ --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
-
- # ---
-
-### Item Add: [Epic]: Documentation Revise Cycle (https://github.com/cosmos/cosmos-sdk-docs/issues/139)
-gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk-docs/issues/139 --owner interchainio
-
-#### Item Edit: [Epic]: Documentation Revise Cycle, PVTI_lADOAAN9684ABqEwzgOxFsI
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOxFsI --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
-###### Item Edit: set story status 📋 Backlog
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgOxFsI --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string f75ad846
-
- # ---
-
-### Item Add: Epic: in-process off chain indexing  (https://github.com/cosmos/cosmos-sdk/issues/20352)
-gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/20352 --owner interchainio
-
-#### Item Edit: Epic: in-process off chain indexing , PVTI_lADOAAN9684ABqEwzgO63Qo
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgO63Qo --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
-###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgO63Qo --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
-
- # ---
-
-### Item Add: [Epic]: server/v2 production readiness via simapp/v2 and testing (https://github.com/cosmos/cosmos-sdk/issues/20439)
-gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/20439 --owner interchainio
-
-#### Item Edit: [Epic]: server/v2 production readiness via simapp/v2 and testing, PVTI_lADOAAN9684ABqEwzgPPyxE
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgPPyxE --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
-###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgPPyxE --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
-
- # ---
-
-### Item Add: EPIC: Simulator  (https://github.com/cosmos/cosmos-sdk/issues/14753)
-gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/14753 --owner interchainio
-
-#### Item Edit: EPIC: Simulator , PVTI_lADOAAN9684ABqEwzgPrtv0
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgPrtv0 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
-###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgPrtv0 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
-
- # ---
-
-### Item Add: [Storev2/Test]: Increase the unit test coverage (https://github.com/cosmos/cosmos-sdk/issues/21040)
-gh project item-add 3 --url https://github.com/cosmos/cosmos-sdk/issues/21040 --owner interchainio
-
-#### Item Edit: [Storev2/Test]: Increase the unit test coverage, PVTI_lADOAAN9684ABqEwzgRJ-Hc
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgRJ-Hc --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
-###### Item Edit: set story status 🤸‍♂️ In Progress
-gh project item-edit --id PVTI_lADOAAN9684ABqEwzgRJ-Hc --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string 47fc9ee4
-
- # ---
-
-### Item Add: EPIC: Template test should have explanations (https://github.com/strangelove-ventures/interchaintest/issues/882)
-gh project item-add 3 --url https://github.com/strangelove-ventures/interchaintest/issues/882 --owner interchainio
-
-#### Item Edit: EPIC: Template test should have explanations, PVTI_lADOBTYxNs4AkKTLzgQlDgY
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOBTYxNs4AkKTLzgQlDgY --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id string 282f80fd
-###### Item Edit: set story status ☃️ Icebox
-gh project item-edit --id PVTI_lADOBTYxNs4AkKTLzgQlDgY --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id string d958ab90
-
- # ---
-
-### Item Add: EPIC: cosmwasm frameworks should be easily deployable via interchaintest (https://github.com/strangelove-ventures/interchaintest/issues/1094)
-gh project item-add 3 --url https://github.com/strangelove-ventures/interchaintest/issues/1094 --owner interchainio
-
-#### Item Edit: EPIC: cosmwasm frameworks should be easily deployable via interchaintest, PVTI_lADOBTYxNs4AkKTLzgQlDhI
-##### Item Edit: set story type to Epic
-gh project item-edit --id PVTI_lADOAsuzxc4AkKP5zgRy9I4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQoo --single-select-option-id 282f80fd
-###### Item Edit: set story status 📋 Backlog
-gh project item-edit --id PVTI_lADOAsuzxc4AkKP5zgRy9I4 --project-id PVT_kwDOAsuzxc4AkKP5 --field-id PVTSSF_lADOAsuzxc4AkKP5zgcaQn8 --single-select-option-id f75ad846
-
- # ---
 

@@ -3,7 +3,7 @@ require "json"
 # TODO
 # 1. Switch from stubs to live data (do we actually need to do this? Could just get fresh stubs)
 # 2. HMW read the **status** from the enemy story and map it to our status?
-# 3. Are we having a problem seeing IPW listed an an active project on the issue itself?
+# 3. Are we having a problem seeing IPW listed as an active project on the issue itself?
 
 # Directory containing the JSON files
 backlog_stubs = "./mocks/backlogs"
@@ -13,7 +13,6 @@ run_me_file = "run_me.sh"
 File.open(run_me_file, "w") {}
 
 # Project-specific details
-
 ipw_project_owner         = 'interchainio'
 ipw_project_number        = 3
 ipw_project_id            = 'PVT_kwDOAsuzxc4AkKP5'
@@ -46,14 +45,17 @@ Dir.glob("#{backlog_stubs}/*.json").each do |file_path|
           file.puts "### Item Add: #{issue_title} (#{issue_url})"
           file.puts "gh project item-add #{ipw_project_number} --url #{issue_url} --owner #{ipw_project_owner}"
           file.puts "\n"
+
+          # Execute the command to get the issue ID in IPW
+          issue_id_in_ipw = `gh p item-list #{ipw_project_number} --owner #{ipw_project_owner} --limit 500 --format json | jq -r '.items[] | select(.content.url == "#{issue_url}") | .id'`.strip
+
           file.puts "#### Item Edit: #{issue_title}, #{issues["id"]}"
           file.puts "##### Item Edit: set story type to Epic"
-          file.puts "gh project item-edit --id #{issues["id"]} --project-id #{ipw_project_id} --field-id #{ipw_story_type_field_id} --single-select-option-id #{ipw_option_id_for_epic}"
+          file.puts "gh project item-edit --id #{issue_id_in_ipw} --project-id #{ipw_project_id} --field-id #{ipw_story_type_field_id} --single-select-option-id #{ipw_option_id_for_epic}"
 
-          issue_id_in_ipw = gh p item-list 3 --owner interchainio --limit 500 --format json | jq -r '.items[] | select(.content.url == "https://github.com/strangelove-ventures/interchaintest/issues/882") | .id'
 
           file.puts "###### Item Edit: set story status #{issue_status}"
-          file.puts "gh project item-edit --id #{issues_id_in_ipw} --project-id #{ipw_project_id} --field-id #{ipw_story_status_field_id} --single-select-option-id #{ipw_option_id_for_story_status}"
+          file.puts "gh project item-edit --id #{issue_id_in_ipw} --project-id #{ipw_project_id} --field-id #{ipw_story_status_field_id} --single-select-option-id #{ipw_option_id_for_story_status}"
           file.puts "\n # ---\n\n"
         end
       end
@@ -63,4 +65,3 @@ end
 
 # Make the run_me.sh file executable
 system("chmod +x #{run_me_file}")
-
