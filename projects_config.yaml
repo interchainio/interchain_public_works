@@ -1,6 +1,7 @@
 projects:
   - owner: interchainio
     project_number: 3
+    title: Interchain Public Works
     story_type_field_id: PVTSSF_lADOAsuzxc4AkKP5zgcaQoo
     status_field_id: PVTSSF_lADOAsuzxc4AkKP5zgcaQn8
     epic_option_id: 282f80fd
@@ -13,6 +14,7 @@ projects:
 
   - owner: strangelove-ventures
     project_number: 58
+    title: Strangelove Project Board
     story_type_field_id: PVTSSF_lADOBTYxNs4AkKTLzgcaTbk
     status_field_id: PVTSSF_lADOBTYxNs4AkKTLzgcaTa4
     epic_option_id: 282f80fd
@@ -25,6 +27,7 @@ projects:
 
   - owner: cosmos
     project_number: 28
+    title: Cosmos SDK
     story_type_field_id: PVTSSF_lADOAAN9684AKm_5zgGm5QY
     status_field_id: PVTSSF_lADOAAN9684AKm_5zgGm46I
     epic_option_id: 282f80fd

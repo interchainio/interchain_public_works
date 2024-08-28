@@ -1,65 +1,120 @@
 require 'json'
 require 'yaml'
-
 # Read config file
-begin
-  config = YAML.load_file('projects_config.yaml')
-rescue StandardError => e
-  puts "Error reading config file: #{e.message}"
-  exit 1
-end
+config = YAML.load_file('projects_config.yaml')
+
+# Directory containing the JSON files
+epics_as_json = './foreign_epics.json'
+
+output_file = 'run_me_graphql.sh'
 
 # Read the JSON output from graphql.sh
-graphql_output = './foreign_epics.json'
 begin
-  project_backlog = JSON.parse(File.read(graphql_output))
+  project_backlog = JSON.parse(File.read(epics_as_json))
 rescue Errno::ENOENT
-  puts "Error: Could not read the file #{graphql_output}. Make sure graphql.sh generated the JSON output correctly."
+  puts "Error: Could not read the file #{epics_as_json}. Is the JSON valid?"
   exit 1
 end
 
-# Open a file to store the GraphQL mutations
-File.open('run_me_graphql.sh', 'w') do |file|
-  file.puts "#!/bin/bash"
-  file.puts "set -e"
-  file.puts
+# Prepare the mutation
+mutations = []
+project_backlog['data']['node']['items']['nodes'].each do |story|
+  issue_url = story['content']['url']
+  issue_title = story['content']['title']
 
-  project_backlog['data']['node']['items']['nodes'].each do |story|
-    issue_title = story['content']['title']
-    issue_id = story['id']
+  # Add item mutation
+  add_mutation = %Q(
+    a#{story['id'].gsub('-', '')}: addProjectV2ItemById(input: {projectId: "#{config['project_id']}", contentId: "#{story['content']['id']}"}) {
+      item {
+        id
+      }
+    }
+  )
+  mutations << add_mutation
 
-    # Construct the GraphQL mutation for setting the story type to "Epic"
-    mutation_story_type = <<-GRAPHQL.gsub(/\s+/, ' ').strip
-    mutation { updateProjectV2ItemFieldValue(input: { projectId: "#{config['project_id']}", itemId: "#{issue_id}", fieldId: "#{config['story_type_field_id']}", value: { singleSelectOptionId: "#{config['epic_option_id']}" } }) { projectV2Item { id } } }
-    GRAPHQL
+  # Update story type mutation
+  update_type_mutation = %Q(
+    t#{story['id'].gsub('-', '')}: updateProjectV2ItemFieldValue(input: {
+      projectId: "#{config['project_id']}",
+      itemId: "#{story['id']}",
+      fieldId: "#{config['story_type_field_id']}",
+      value: { singleSelectOptionId: "#{config['epic_option_id']}" }
+    }) {
+      projectV2Item {
+        id
+      }
+    }
+  )
+  mutations << update_type_mutation
 
-    # Write the mutation to the shell script
-    file.puts "echo 'Updating story type for #{issue_title}'"
-    file.puts "gh api graphql -f query='#{mutation_story_type}'"
-
-    # If a status exists, construct the GraphQL mutation for updating the status
-    if story['status'] && config['status_field_id'] && config['status_option_ids']
-      status_name = story['status']['name']
-      status_option_id = config['status_option_ids'][status_name]
-      
-      if status_option_id
-        mutation_story_status = <<-GRAPHQL.gsub(/\s+/, ' ').strip
-        mutation { updateProjectV2ItemFieldValue(input: { projectId: "#{config['project_id']}", itemId: "#{issue_id}", fieldId: "#{config['status_field_id']}", value: { singleSelectOptionId: "#{status_option_id}" } }) { projectV2Item { id } } }
-        GRAPHQL
-
-        # Write the status update mutation to the shell script
-        file.puts "echo 'Updating story status for #{issue_title}'"
-        file.puts "gh api graphql -f query='#{mutation_story_status}'"
-      else
-        file.puts "echo 'No matching status option found for #{status_name}'"
-      end
+  # Update status mutation if status exists
+  if story['status'] && config['status_field_id'] && config['status_option_ids']
+    status_name = story['status']['name']
+    status_option_id = config['status_option_ids'][status_name]
+    if status_option_id
+      update_status_mutation = %Q(
+        s#{story['id'].gsub('-', '')}: updateProjectV2ItemFieldValue(input: {
+          projectId: "#{config['project_id']}",
+          itemId: "#{story['id']}",
+          fieldId: "#{config['status_field_id']}",
+          value: { singleSelectOptionId: "#{status_option_id}" }
+        }) {
+          projectV2Item {
+            id
+          }
+        }
+      )
+      mutations << update_status_mutation
     end
-
-    file.puts
   end
 end
 
-# Make the script executable
-system('chmod +x run_me_graphql.sh')
+# Construct the full mutation
+full_mutation = %Q(
+mutation {
+  #{mutations.join("\n")}
+}
+)
 
-puts "GraphQL mutations written to run_me_graphql.sh"
+# Write the mutation to the shell script
+File.open(output_file, 'w') do |file|
+  file.puts "#!/bin/bash"
+  file.puts "set -e"
+  file.puts
+  file.puts "# Example of one instance of the mutation with variable names:"
+  file.puts "# mutation {"
+  file.puts "#   a${story_id}: addProjectV2ItemById(input: {projectId: ${project_id}, contentId: ${content_id}}) {"
+  file.puts "#     item {"
+  file.puts "#       id"
+  file.puts "#     }"
+  file.puts "#   }"
+  file.puts "#   t${story_id}: updateProjectV2ItemFieldValue(input: {"
+  file.puts "#     projectId: ${project_id},"
+  file.puts "#     itemId: ${story_id},"
+  file.puts "#     fieldId: ${story_type_field_id},"
+  file.puts "#     value: { singleSelectOptionId: ${epic_option_id} }"
+  file.puts "#   }) {"
+  file.puts "#     projectV2Item {"
+  file.puts "#       id"
+  file.puts "#     }"
+  file.puts "#   }"
+  file.puts "#   s${story_id}: updateProjectV2ItemFieldValue(input: {"
+  file.puts "#     projectId: ${project_id},"
+  file.puts "#     itemId: ${story_id},"
+  file.puts "#     fieldId: ${status_field_id},"
+  file.puts "#     value: { singleSelectOptionId: ${status_option_id} }"
+  file.puts "#   }) {"
+  file.puts "#     projectV2Item {"
+  file.puts "#       id"
+  file.puts "#     }"
+  file.puts "#   }"
+  file.puts "# }"
+  file.puts
+  file.puts "echo 'Executing GraphQL mutation...'"
+  file.puts "gh api graphql -f query='#{full_mutation.gsub("'", "'\\''")}'"
+end
+
+# Make the script executable
+system("chmod +x #{output_file}")
+
+puts "GraphQL mutation written to #{output_file}"
