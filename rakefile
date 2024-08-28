@@ -13,7 +13,7 @@ end
 
 desc "Send PUT requests to IPW"
 task :put_epics => :construct_puts do
-  sh './PUT_epics_to_IPW.sh'
+  sh './run_me_graphql.sh'
 end
 
 # Default task

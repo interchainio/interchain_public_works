@@ -1,5 +1,9 @@
 require 'json'
 require 'yaml'
+
+puts "§§§§§§§§§§§ starting #{File.basename(__FILE__)} §§§§§§§§§§§"
+puts
+
 # Read config file
 config = YAML.load_file('projects_config.yaml')
 
@@ -81,6 +85,8 @@ File.open(output_file, 'w') do |file|
   file.puts "#!/bin/bash"
   file.puts "set -e"
   file.puts
+  file.puts "echo §§§§§§§§§§§§§ starting #{output_file} §§§§§§§§§§§§§'"
+  file.puts
   file.puts "# Example of one instance of the mutation with variable names:"
   file.puts "# mutation {"
   file.puts "#   a${story_id}: addProjectV2ItemById(input: {projectId: ${project_id}, contentId: ${content_id}}) {"
@@ -112,9 +118,13 @@ File.open(output_file, 'w') do |file|
   file.puts
   file.puts "echo 'Executing GraphQL mutation...'"
   file.puts "gh api graphql -f query='#{full_mutation.gsub("'", "'\\''")}'"
+  file.puts
+  file.puts "echo '§§§§§§§§§§§§§ finished with #{output_file} §§§§§§§§§§§§§'"
 end
 
 # Make the script executable
 system("chmod +x #{output_file}")
 
 puts "GraphQL mutation written to #{output_file}"
+puts
+puts "§§§§§§§§§§§ finished with #{File.basename(__FILE__)} §§§§§§§§§§§"

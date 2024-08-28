@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo §§§§§§§§§§§§§ starting run_me_graphql.sh §§§§§§§§§§§§§'
+
 # Example of one instance of the mutation with variable names:
 # mutation {
 #   a${story_id}: addProjectV2ItemById(input: {projectId: ${project_id}, contentId: ${content_id}}) {
@@ -1935,3 +1937,5 @@ mutation {
   
 }
 '
+
+echo '§§§§§§§§§§§§§ finished with run_me_graphql.sh §§§§§§§§§§§§§'

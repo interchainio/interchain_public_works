@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "§§§§§§§§§§ starting $(basename "$0") §§§§§§§§§§"
+
 # Ensure yq is installed
 if ! command -v yq &> /dev/null
 then
@@ -95,3 +97,5 @@ for i in $(yq e '.projects | keys | .[]' "${CONFIG_FILE}"); do
 done
 
 echo "GraphQL Epic Fetcher completed. Results saved to ${OUTPUT_FILE}."
+
+echo "§§§§§§§§§§ finished with $(basename "$0") §§§§§§§§§§"
