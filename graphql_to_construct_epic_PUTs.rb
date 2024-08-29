@@ -1,8 +1,22 @@
 require 'json'
 require 'yaml'
+require 'optparse'
+require 'logger'
+
+logger = Logger.new(STDOUT)
+logger.level = Logger::DEBUG
 
 puts "§§§§§§§§§§§ starting #{File.basename(__FILE__)} §§§§§§§§§§§"
 puts
+
+# Parse command line options
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: ruby #{File.basename(__FILE__)} [options]"
+  opts.on("-v", "--verbose", "Run in verbose mode") do |v|
+    options[:verbose] = v
+  end
+end.parse!
 
 # Read config file
 config = YAML.load_file('projects_config.yaml')
@@ -23,53 +37,29 @@ end
 # Prepare the mutation
 mutations = []
 project_backlog['data']['node']['items']['nodes'].each do |story|
-  issue_url = story['content']['url']
-  issue_title = story['content']['title']
-
-  # Add item mutation
-  add_mutation = %Q(
-    a#{story['id'].gsub('-', '')}: addProjectV2ItemById(input: {projectId: "#{config['project_id']}", contentId: "#{story['content']['id']}"}) {
-      item {
-        id
-      }
-    }
-  )
-  mutations << add_mutation
+  logger.debug "Processing story: #{story['id']}"
 
   # Update story type mutation
   update_type_mutation = %Q(
     t#{story['id'].gsub('-', '')}: updateProjectV2ItemFieldValue(input: {
-      projectId: "#{config['project_id']}",
-      itemId: "#{story['id']}",
-      fieldId: "#{config['story_type_field_id']}",
-      value: { singleSelectOptionId: "#{config['epic_option_id']}" }
+      projectId: "#{config['project_id']}", # Project ID
+      itemId: "#{story['id']}", # Item ID
+      fieldId: "#{config['story_type_field_id']}", # Field ID (Story Type)
+      value: { singleSelectOptionId: "#{config['epic_option_id']}" } # Epic option ID
     }) {
       projectV2Item {
         id
       }
     }
   )
-  mutations << update_type_mutation
 
-  # Update status mutation if status exists
-  if story['status'] && config['status_field_id'] && config['status_option_ids']
-    status_name = story['status']['name']
-    status_option_id = config['status_option_ids'][status_name]
-    if status_option_id
-      update_status_mutation = %Q(
-        s#{story['id'].gsub('-', '')}: updateProjectV2ItemFieldValue(input: {
-          projectId: "#{config['project_id']}",
-          itemId: "#{story['id']}",
-          fieldId: "#{config['status_field_id']}",
-          value: { singleSelectOptionId: "#{status_option_id}" }
-        }) {
-          projectV2Item {
-            id
-          }
-        }
-      )
-      mutations << update_status_mutation
-    end
+  logger.debug "Generated mutation: #{update_type_mutation}"
+
+  if config['project_id'].to_s.empty? || story['id'].to_s.empty? ||
+     config['story_type_field_id'].to_s.empty? || config['epic_option_id'].to_s.empty?
+    logger.warn "Warning: Missing required ID for mutation: #{update_type_mutation}"
+  else
+    mutations << update_type_mutation
   end
 end
 
@@ -85,7 +75,7 @@ File.open(output_file, 'w') do |file|
   file.puts "#!/bin/bash"
   file.puts "set -e"
   file.puts
-  file.puts "echo §§§§§§§§§§§§§ starting #{output_file} §§§§§§§§§§§§§'"
+  file.puts "echo '§§§§§§§§§§§§§ starting #{output_file} §§§§§§§§§§§§§'"
   file.puts
   file.puts "# Example of one instance of the mutation with variable names:"
   file.puts "# mutation {"
@@ -117,7 +107,7 @@ File.open(output_file, 'w') do |file|
   file.puts "# }"
   file.puts
   file.puts "echo 'Executing GraphQL mutation...'"
-  file.puts "gh api graphql -f query='#{full_mutation.gsub("'", "'\\''")}'"
+  file.puts "gh api graphql --silent -f query='#{full_mutation.gsub("'", "'\\''")}' ${VERBOSE:+--verbose}"
   file.puts
   file.puts "echo '§§§§§§§§§§§§§ finished with #{output_file} §§§§§§§§§§§§§'"
 end
@@ -126,5 +116,10 @@ end
 system("chmod +x #{output_file}")
 
 puts "GraphQL mutation written to #{output_file}"
+if options[:verbose]
+  puts "Script will run in verbose mode"
+else
+  puts "Script will run silently (use -v or --verbose for verbose output)"
+end
 puts
 puts "§§§§§§§§§§§ finished with #{File.basename(__FILE__)} §§§§§§§§§§§"

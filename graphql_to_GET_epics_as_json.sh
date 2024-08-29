@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "§§§§§§§§§§ starting $(basename "$0") §§§§§§§§§§"
+echo ""
 
 # Ensure yq is installed
 if ! command -v yq &> /dev/null

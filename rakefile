@@ -1,6 +1,19 @@
 require 'rake'
 
+# order
+# 0. update_project_titles.rb => projects_config.yaml
+# 1. graphql_to_GET_epics_as_json.sh => foreign_epics.json
+# 2. graphql_to_construct_epic_PUTs.rb => run_me_graphql.sh
+# 3. run_me_graphql.sh
+
 # Define the tasks
+desc "Update project config"
+task :config do
+  ruby 'update_project_config.rb'
+end
+
+
+
 desc "Fetch Epics as JSON"
 task :fetch_epics do
   sh './graphql_to_GET_epics_as_json.sh'

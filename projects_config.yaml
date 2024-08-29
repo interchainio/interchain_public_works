@@ -1,42 +1,44 @@
+---
 projects:
-  - owner: interchainio
-    project_number: 3
-    title: Interchain Public Works
-    story_type_field_id: PVTSSF_lADOAsuzxc4AkKP5zgcaQoo
-    status_field_id: PVTSSF_lADOAsuzxc4AkKP5zgcaQn8
-    epic_option_id: 282f80fd
-    status_option_mapping:
-      "☃️ Icebox": d958ab90
-      "📋 Backlog": f75ad846
-      "🤸‍♂️ In Progress": 47fc9ee4
-      "👀 Waiting / In review": 2ab45224
-      "🥳 Done": 98236657
-
-  - owner: strangelove-ventures
-    project_number: 58
-    title: Strangelove Project Board
-    story_type_field_id: PVTSSF_lADOBTYxNs4AkKTLzgcaTbk
-    status_field_id: PVTSSF_lADOBTYxNs4AkKTLzgcaTa4
-    epic_option_id: 282f80fd
-    status_option_mapping:
-      "☃️ Icebox": d958ab90
-      "📋 Backlog": f75ad846
-      "🤸‍♂️ In Progress": 47fc9ee4
-      "👀 Waiting / In review": 2ab45224
-      "🥳 Done": 98236657
-
-  - owner: cosmos
-    project_number: 28
-    title: Cosmos SDK
-    story_type_field_id: PVTSSF_lADOAAN9684AKm_5zgGm5QY
-    status_field_id: PVTSSF_lADOAAN9684AKm_5zgGm46I
-    epic_option_id: 282f80fd
-    status_option_mapping:
-      "🩹 F1: Triage": 6cc47a2c
-      "🤔 F1: Investigate": f155678b
-      "📥 F2: Todo": 8cf50de9
-      "🛑 F3: OnHold": f75ad846
-      "🏗 F3: InProgress": 47fc9ee4
-      "👀 F3: InReview": a066252b
-      "👍 F4: Assessment": f397b409
-      "✅ Done": 98236657
+- owner: interchainio
+  project_number: 3
+  title: Interchain Public Works
+  story_type_field_id: PVTSSF_lADOAsuzxc4AkKP5zgcaQoo
+  status_field_id: PVTSSF_lADOAsuzxc4AkKP5zgcaQn8
+  epic_option_id: 282f80fd
+  status_option_mapping:
+    "☃️ Icebox": d958ab90
+    "\U0001F4CB Backlog": f75ad846
+    "\U0001F938‍♂️ In Progress": 47fc9ee4
+    "\U0001F440 Waiting / In review": 2ab45224
+    "\U0001F973 Done": 98236657
+  project_id: PVT_kwDOAsuzxc4AkKP5
+- owner: strangelove-ventures
+  project_number: 58
+  title: Interchaintest
+  story_type_field_id: PVTSSF_lADOBTYxNs4AkKTLzgcaTbk
+  status_field_id: PVTSSF_lADOBTYxNs4AkKTLzgcaTa4
+  epic_option_id: 282f80fd
+  status_option_mapping:
+    "☃️ Icebox": d958ab90
+    "\U0001F4CB Backlog": f75ad846
+    "\U0001F938‍♂️ In Progress": 47fc9ee4
+    "\U0001F440 Waiting / In review": 2ab45224
+    "\U0001F973 Done": 98236657
+  project_id: PVT_kwDOBTYxNs4AkKTL
+- owner: cosmos
+  project_number: 28
+  title: Cosmos Hub
+  story_type_field_id: PVTSSF_lADOAAN9684AKm_5zgGm5QY
+  status_field_id: PVTSSF_lADOAAN9684AKm_5zgGm46I
+  epic_option_id: 282f80fd
+  status_option_mapping:
+    "\U0001FA79 F1: Triage": 6cc47a2c
+    "\U0001F914 F1: Investigate": f155678b
+    "\U0001F4E5 F2: Todo": 8cf50de9
+    "\U0001F6D1 F3: OnHold": f75ad846
+    "\U0001F3D7 F3: InProgress": 47fc9ee4
+    "\U0001F440 F3: InReview": a066252b
+    "\U0001F44D F4: Assessment": f397b409
+    "✅ Done": 98236657
+  project_id: PVT_kwDOAAN9684AKm_5

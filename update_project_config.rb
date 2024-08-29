@@ -13,6 +13,9 @@ config['projects'].each do |project|
   
   # Add title to the project configuration
   project['title'] = project_details['title']
+
+  # Add project_id to the project configuration
+  project['project_id'] = project_details['id']
 end
 
 # Write updated configuration back to the file
